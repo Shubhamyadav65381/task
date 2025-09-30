@@ -6,7 +6,7 @@ This project is an assessment for an online internship. It aims to predict the s
 
 - `Road Accident Data.csv`: The dataset containing accident records and features.
 - `task.ipynb`: Jupyter notebook with the complete data analysis, preprocessing, modeling, and prediction workflow.
-- `AI Intern Task.pdf`: Assessment instructions (if provided).
+- `AI Intern Task.pdf`: Assessment instructions .
 - `README.md`: Project overview and instructions.
 
 ## Workflow
@@ -49,15 +49,3 @@ This project is an assessment for an online internship. It aims to predict the s
 - Python 3.x
 - pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, lightgbm, catboost, joblib
 
-## Example Usage
-
-```python
-sample_input = {
-    'Weather_Conditions': 'Fine no high winds',
-    'Light_Conditions': 'Daylight',
-    'Road_Surface_Conditions': 'Dry',
-    'Number_of_Vehicles': 2,
-    'Number_of_Casualties': 1,
-    # ... include all required features
-}
-print("Predicted Priority:", predict_priority(sample_input))
