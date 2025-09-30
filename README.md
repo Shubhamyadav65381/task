@@ -1,51 +1,70 @@
 # Road Accident Severity Prediction
 
-This project is an assessment for an online internship. It aims to predict the severity (priority) of road accidents using machine learning models, based on the provided dataset.
+Predicting the severity of road accidents is crucial for prioritizing emergency response and improving road safety. This project leverages machine learning to classify accident severity (priority) using real-world data and advanced modeling techniques.
 
-## Files
+## 📁 Project Structure
+- `Road Accident Data.csv` — Cleaned dataset of UK road accidents.  
+- `task.ipynb` — End-to-end notebook: EDA, preprocessing, modeling, evaluation, and prediction.  
+- `README.md` — Project overview and usage guide.  
 
-- `Road Accident Data.csv`: The dataset containing accident records and features.
-- `task.ipynb`: Jupyter notebook with the complete data analysis, preprocessing, modeling, and prediction workflow.
-- `AI Intern Task.pdf`: Assessment instructions .
-- `README.md`: Project overview and instructions.
+## 🧑‍💻 What’s Inside
+### 1. Data Exploration & Visualization
+- Loads and inspects the dataset for missing values, duplicates, and outliers.  
+- Visualizes accident severity distribution and relationships with weather, light, and road conditions.  
 
-## Workflow
+### 2. Data Cleaning & Preprocessing
+- Removes missing values and duplicates.  
+- Detects and eliminates outliers using Z-score filtering.  
+- Encodes categorical features and scales numerical features for optimal model performance.  
 
-1. **Data Loading & Exploration**
-   - Loads the dataset using pandas.
-   - Displays basic info, checks for nulls, duplicates, and outliers.
-   - Visualizes distributions and relationships using seaborn/matplotlib.
+### 3. Feature Engineering
+- Renames the target column to `priority` for clarity.  
+- Prepares the data for machine learning by encoding and scaling.  
 
-2. **Data Cleaning**
-   - Handles missing values and removes duplicates.
-   - Removes outliers using Z-score filtering.
+### 4. Model Training & Evaluation
+Trains and compares multiple classifiers:
+- Logistic Regression  
+- Random Forest  
+- XGBoost  
+- LightGBM  
+- SVM  
+- CatBoost  
 
-3. **Feature Engineering**
-   - Encodes categorical features with `LabelEncoder`.
-   - Scales numerical features with `StandardScaler`.
-   - Renames the target column to `priority`.
+Evaluates models using accuracy and F1-score.  
+Visualizes model performance and selects the best model automatically.  
 
-4. **Model Training & Evaluation**
-   - Splits data into training and test sets.
-   - Trains multiple classifiers: Logistic Regression, Random Forest, XGBoost, LightGBM, SVM, CatBoost.
-   - Evaluates models using accuracy and F1-score.
-   - Selects the best model based on F1-score.
+### 5. Prediction API
+- Implements a robust `predict_priority(input_dict)` function for real-time predictions on new accident data.  
 
-5. **Prediction Function**
-   - Implements `predict_priority(input_dict)` to predict accident severity for new data.
+### 6. Model Export
+- Saves the best-performing model as a `.pkl` file for easy deployment.  
 
-6. **Saving the Model**
-   - Saves the best model as a `.pkl` file for future use.
+## 🚀 Quickstart
+1. Clone or Download this repository.  
+2. Install dependencies (run in notebook or terminal).  
+3. Open `task.ipynb` in Jupyter Notebook or Google Colab.  
+4. Run all cells to reproduce the workflow and results.  
+5. Predict severity for new data.  
 
-## How to Run
+## 📊 Results
+- Comprehensive EDA reveals key factors influencing accident severity.  
+- Multiple ML models compared; best model selected based on F1-score.  
+- Ready-to-use prediction function for real-world applications.  
 
-1. Open `task.ipynb` in Jupyter Notebook or Google Colab.
-2. Ensure all dependencies are installed (see notebook for `%pip install` commands).
-3. Run all cells sequentially.
-4. Use the `predict_priority` function to predict severity for new accident records.
+## 🛠️ Tech Stack
+- Python 3.x  
+- pandas, numpy, matplotlib, seaborn  
+- scikit-learn, xgboost, lightgbm, catboost  
+- joblib  
 
-## Requirements
+## 💡 Key Learnings
+- Data cleaning and outlier removal significantly improve model accuracy.  
+- Ensemble models (Random Forest, XGBoost, CatBoost) often outperform linear models for classification tasks.  
+- Feature encoding and scaling are essential for robust predictions.  
 
-- Python 3.x
-- pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, lightgbm, catboost, joblib
+## 📬 Contact
+For questions or collaboration, connect via email - shubham65381@gmail.com.  
 
+---
+
+**Note**: For full details, see the code and comments in `task.ipynb`.  
